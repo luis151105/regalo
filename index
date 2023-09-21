@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ramo de Tulipanes Amarillos</title>
+<style>
+  canvas {
+    border: 1px solid black;
+  }
+</style>
+</head>
+<body>
+  <canvas id="lienzo" width="800" height="600"></canvas>
+
+  <script>
+    var canvas = document.getElementById('lienzo');
+    var ctx = canvas.getContext('2d');
+
+    // Dibuja el fondo
+    ctx.fillStyle = '#E6F0FF'; // Color de fondo azul claro
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // Dibuja los tulipanes amarillos
+    ctx.fillStyle = '#FFD700'; // Color amarillo
+    ctx.beginPath();
+    ctx.moveTo(400, 300);
+    ctx.lineTo(360, 300);
+    ctx.quadraticCurveTo(360, 250, 400, 200);
+    ctx.quadraticCurveTo(440, 250, 440, 300);
+    ctx.lineTo(400, 300);
+    ctx.fill();
+
+    // Dibuja los tallos
+    ctx.fillStyle = '#228B22'; // Color verde
+    ctx.fillRect(392, 300, 16, 100);
+    ctx.fillRect(408, 300, 16, 100);
+
+  </script>
+</body>
+</html>
